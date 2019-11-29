@@ -4,6 +4,8 @@ const alunas = require("../model/alunas.json");
 const bcrypt = require("bcrypt");
 
 function checkPassword(passwordEntry, password) {
+  //console.log(passwordEntry, 'aqui é o password do usuario')
+  //console.log(password, 'aqui é o password do DB')
   return bcrypt.compareSync(passwordEntry, password);
 }
 
